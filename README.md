@@ -6,3 +6,5 @@ Visit the repository for more details.
 ## Getting Started
 
 Review the generated code, and it's recommended to run a `npm init` to adjust basic project configurations before start.
+
+In order to spin up a local environment with Docker Compose, run `make up`. 
