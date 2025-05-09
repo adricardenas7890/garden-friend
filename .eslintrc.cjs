@@ -1,8 +1,13 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint/eslint-plugin', 'import', 'eslint-plugin-tsdoc'],
-  extends: ['plugin:@typescript-eslint/recommended'],
+  // plugins: ['@typescript-eslint/eslint-plugin', 'import', 'eslint-plugin-tsdoc'],
+  plugins: ['@typescript-eslint', 'react', 'import', 'tsdoc'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
   env: {
     jest: true,
     node: true,
@@ -24,7 +29,6 @@ module.exports = {
     '@typescript-eslint/no-dupe-class-members': ['error'],
     '@typescript-eslint/no-useless-constructor': ['error'],
     '@typescript-eslint/no-inferrable-types': ['off'],
-
-    'import/extensions': ['warn', 'ignorePackages', { js: 'always', jsx: 'never', ts: 'never', tsx: 'never' }],
+    'import/extensions': ['warn', 'ignorePackages', { js: 'always', jsx: 'never', ts: 'always', tsx: 'always' }],
   },
 }

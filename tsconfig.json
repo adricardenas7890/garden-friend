@@ -1,16 +1,15 @@
 {
   "compilerOptions": {
-    "jsx": "react",
+    "jsx": "react-jsx",
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "importHelpers": true,
     "resolveJsonModule": true,
     "sourceMap": true,
     "declaration": true,
-
     "alwaysStrict": true,
     "forceConsistentCasingInFileNames": true,
     "removeComments": true,
@@ -28,7 +27,7 @@
     "composite": true,
     "skipLibCheck": true,
     "noEmitHelpers": false,
-
+    "types": ["vitest", "@testing-library/jest-dom"],
     "outDir": "dist",
     "rootDir": "src",
     "baseUrl": "src",
