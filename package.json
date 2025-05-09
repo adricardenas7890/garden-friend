@@ -1,10 +1,12 @@
 {
-  "name": "my-app",
+  "name": "garden-friend",
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "scripts": {
     "start": "node dist/main.js",
+    "start dev": "vite",
+    "dev": "vite",
     "start:dev": "nodemon --ext js,ts,json,env --exec tsx src/main.ts",
     "prepare": "husky install",
     "build": "tsc --project tsconfig.build.json",
@@ -58,6 +60,7 @@
     "ts-node": "^10.9.2",
     "tsx": "^4.19.3",
     "typescript": "^4.9.5",
+    "vite": "^6.3.5",
     "vitest": "^3.1.3"
   }
 }
