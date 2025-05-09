@@ -1,12 +1,12 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  // plugins: ['@typescript-eslint/eslint-plugin', 'import', 'eslint-plugin-tsdoc'],
-  plugins: ['@typescript-eslint', 'react', 'import', 'tsdoc'],
+  plugins: ['@typescript-eslint', 'react', 'import', 'tsdoc', ],
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:import/typescript'
   ],
   env: {
     jest: true,
@@ -21,7 +21,10 @@ module.exports = {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx']
       }
-    }
+    },
+    react: {
+      version: 'detect',
+    },
   },
   rules: {
     'no-console': 'error',
@@ -29,6 +32,8 @@ module.exports = {
     '@typescript-eslint/no-dupe-class-members': ['error'],
     '@typescript-eslint/no-useless-constructor': ['error'],
     '@typescript-eslint/no-inferrable-types': ['off'],
-    'import/extensions': ['warn', 'ignorePackages', { js: 'always', jsx: 'never', ts: 'always', tsx: 'always' }],
+    'import/extensions': ['warn', 'ignorePackages', { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' }],
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off'
   },
 }
