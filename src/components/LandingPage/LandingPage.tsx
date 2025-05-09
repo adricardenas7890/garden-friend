@@ -31,7 +31,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ animationAddress, animationTi
     <>
       {!disabled && (
         <div
-          className="animation-wrapper-container"
+          className={styles['animation-wrapper-container']}
           style={{
             opacity: isVisible ? 1 : 0,
             transition: `opacity ${animationTime}ms ease-out`,
@@ -39,7 +39,10 @@ const LandingPage: React.FC<LandingPageProps> = ({ animationAddress, animationTi
           }}
           onClick={handleClick}
         >
-          <div className="animation-container">{animationAddress}</div>
+          <div className={styles['animation-container']}>
+            {animationAddress}
+            This is a test
+          </div>
         </div>
       )}
     </>
